@@ -29,7 +29,7 @@ class FireClass {
     return global[singleton].firebaseAdmin.database().ref(path)
   }
 
-  storage(name) {
+  bucket(name) {
     return global[singleton].firebaseAdmin.storage().bucket(name);
   }
 

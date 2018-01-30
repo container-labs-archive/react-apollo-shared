@@ -114,5 +114,5 @@
     "ppare-deploy": "npm run package-functions-production",
     "predeploy": "npm run ppare-deploy"
   },
-  "version": "0.8.0"
+  "version": "0.9.1"
 }

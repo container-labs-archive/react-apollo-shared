@@ -19,7 +19,7 @@ var _GenericError = _interopRequireDefault(require("./utils/GenericError"));
 // purposefully abstract, can be used for anything waiting for data
 // not responsible for loading data
 function queryLoader(WrappedComponent) {
-  return class HOCWaitingOnData extends _react.Component {
+  return class HOCQueryLoader extends _react.Component {
     constructor(...args) {
       var _temp;
 

@@ -65,6 +65,12 @@ Object.defineProperty(exports, "queryLoader", {
     return _hocs.queryLoader;
   }
 });
+Object.defineProperty(exports, "refetchOnMount", {
+  enumerable: true,
+  get: function () {
+    return _hocs.refetchOnMount;
+  }
+});
 Object.defineProperty(exports, "waitingOnData", {
   enumerable: true,
   get: function () {

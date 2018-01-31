@@ -12,6 +12,7 @@ import {
   checkPermission,
   requireAdmin,
   queryLoader,
+  refetchOnMount,
   waitingOnData,
 } from './hocs';
 
@@ -29,5 +30,6 @@ export {
   checkPermission,
   requireAdmin,
   queryLoader,
+  refetchOnMount,
   waitingOnData,
 }

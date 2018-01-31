@@ -1,6 +1,6 @@
 {
   "name": "@containerlabs/react-apollo-shared",
-  "version": "0.6.0",
+  "version": "0.9.0",
   "description": "a shared library for hocs and utils used in a React / Apollo application",
   "main": "functions/index.js",
   "scripts": {
@@ -28,9 +28,11 @@
   },
   "homepage": "https://github.com/container-labs/react-apollo-shared#readme",
   "dependencies": {
+    "babel-runtime": "7.0.0-beta.3",
     "lodash": "latest",
     "material-ui": "1.0.0-beta.23",
     "material-ui-icons": "^1.0.0-beta.17",
+    "redux": "^3.7.2",
     "react": "15.6.2",
     "react-redux": "5.0.5",
     "react-router-redux": "^5.0.0-alpha.6"

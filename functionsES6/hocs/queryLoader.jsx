@@ -8,7 +8,7 @@ import GenericError from './utils/GenericError';
 // purposefully abstract, can be used for anything waiting for data
 // not responsible for loading data
 function queryLoader(WrappedComponent) {
-  return class HOCWaitingOnData extends Component {
+  return class HOCQueryLoader extends Component {
     props: {
       data: Object,
     };

@@ -29,6 +29,12 @@ Object.defineProperty(exports, "queryLoader", {
     return _queryLoader.default;
   }
 });
+Object.defineProperty(exports, "refetchOnMount", {
+  enumerable: true,
+  get: function () {
+    return _refetchOnMount.default;
+  }
+});
 Object.defineProperty(exports, "waitingOnData", {
   enumerable: true,
   get: function () {
@@ -39,5 +45,7 @@ Object.defineProperty(exports, "waitingOnData", {
 var _authenticated = require("./authenticated");
 
 var _queryLoader = _interopRequireDefault(require("./queryLoader"));
+
+var _refetchOnMount = _interopRequireDefault(require("./refetchOnMount"));
 
 var _waitingOnData = _interopRequireDefault(require("./waitingOnData"));

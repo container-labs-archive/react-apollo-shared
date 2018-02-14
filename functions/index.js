@@ -77,11 +77,19 @@ Object.defineProperty(exports, "waitingOnData", {
     return _hocs.waitingOnData;
   }
 });
+Object.defineProperty(exports, "Logger", {
+  enumerable: true,
+  get: function () {
+    return _utils.Logger;
+  }
+});
 exports.default = void 0;
 
 var _graphql = _interopRequireWildcard(require("./graphql"));
 
 var _hocs = require("./hocs");
+
+var _utils = require("./utils");
 
 var _default = _graphql.default;
 exports.default = _default;

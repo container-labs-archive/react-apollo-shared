@@ -10,12 +10,12 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 function refetchOnMount(WrappedComponent) {
-  // eslint-disable-line
   return class HOCWaitingOnData extends _react.Component {
     componentWillMount() {
       const {
         data
-      } = this.props; // cheap way at the cost of a network call to get updates to lists without writing to the local store the 'right way'
+      } = this.props; // cheap way at the cost of a network call to get updates to lists without
+      // writing to the local store the 'right way'
       // TODO: 'the right way' is to use apollo to update the local store
 
       data.refetch();

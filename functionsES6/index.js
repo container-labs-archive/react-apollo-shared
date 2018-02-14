@@ -16,6 +16,10 @@ import {
   waitingOnData,
 } from './hocs';
 
+import {
+  Logger,
+} from './utils';
+
 export default FireClass;
 
 export {
@@ -32,4 +36,6 @@ export {
   queryLoader,
   refetchOnMount,
   waitingOnData,
+
+  Logger,
 }

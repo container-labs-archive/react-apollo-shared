@@ -67,6 +67,11 @@ let FireClass = class FireClass {
 
   getEntities(path) {
     return global[singleton].getValue(path).then(global[singleton].mapSnapshotToEntities);
+  } // begin firestore
+
+
+  firestoreDb() {
+    return global[singleton].firebaseAdmin.firestore();
   }
 
 };

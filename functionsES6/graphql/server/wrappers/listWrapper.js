@@ -21,7 +21,7 @@ function listWrapper(collectionName: String, opts: Object) {
       if (queryOpts.sortBy !== undefined) {
         console.log('sorting');
         // todo: allow sortby to be an array?
-        sortedModels = lodash.sortBy(models, [queryOpts.sortBy]);
+        sortedModels = lodash.sortBy(models, [model => model[queryOpts.sortBy].toLowerCase()]);
       }
       if (queryOpts.sortReverse !== undefined) {
         sortedModels = sortedModels.reverse();

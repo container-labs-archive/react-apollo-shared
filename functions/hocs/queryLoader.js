@@ -51,7 +51,7 @@ function queryLoader(WrappedComponent) {
         }
       }
 
-      return _react.default.createElement("div", null, content);
+      return content;
     }
 
   };

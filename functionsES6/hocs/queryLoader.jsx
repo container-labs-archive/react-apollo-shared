@@ -33,11 +33,7 @@ function queryLoader(WrappedComponent) {
         }
       }
 
-      return (
-        <div>
-          {content}
-        </div>
-      );
+      return content;
     }
   };
 }

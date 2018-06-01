@@ -7,37 +7,37 @@ Object.defineProperty(exports, "__esModule", {
 });
 Object.defineProperty(exports, "createWrapper", {
   enumerable: true,
-  get: function () {
+  get: function get() {
     return _index.createWrapper;
   }
 });
 Object.defineProperty(exports, "deleteWrapper", {
   enumerable: true,
-  get: function () {
+  get: function get() {
     return _index.deleteWrapper;
   }
 });
 Object.defineProperty(exports, "listWrapper", {
   enumerable: true,
-  get: function () {
+  get: function get() {
     return _index.listWrapper;
   }
 });
 Object.defineProperty(exports, "childListWrapper", {
   enumerable: true,
-  get: function () {
+  get: function get() {
     return _index.childListWrapper;
   }
 });
 Object.defineProperty(exports, "singleWrapper", {
   enumerable: true,
-  get: function () {
+  get: function get() {
     return _index.singleWrapper;
   }
 });
 Object.defineProperty(exports, "updateWrapper", {
   enumerable: true,
-  get: function () {
+  get: function get() {
     return _index.updateWrapper;
   }
 });

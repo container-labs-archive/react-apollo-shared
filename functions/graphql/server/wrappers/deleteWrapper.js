@@ -34,4 +34,3 @@ function deleteWrapper(itemName, deleteFunction) {
 
 var _default = deleteWrapper;
 exports.default = _default;
-module.exports = exports["default"];

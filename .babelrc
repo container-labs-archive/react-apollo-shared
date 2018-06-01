@@ -18,6 +18,5 @@
     "transform-flow-strip-types",
     "transform-decorators-legacy",
     "transform-runtime",
-    "react-hot-loader/babel",
   ],
 }

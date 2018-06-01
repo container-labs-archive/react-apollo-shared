@@ -9,7 +9,7 @@ exports.default = GenericError;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Error = _interopRequireDefault(require("material-ui-icons/Error"));
+var _Error = _interopRequireDefault(require("@material-ui/icons/Error"));
 
 const CONTAINER_STYLES = {
   textAlign: 'center',
@@ -17,13 +17,8 @@ const CONTAINER_STYLES = {
 };
 
 function GenericError(props) {
-  const {
-    error // eslint-disable-line
-
-  } = props;
+  const error = props.error;
   return _react.default.createElement("div", {
     style: CONTAINER_STYLES
   }, _react.default.createElement(_Error.default, null));
 }
-
-module.exports = exports["default"];

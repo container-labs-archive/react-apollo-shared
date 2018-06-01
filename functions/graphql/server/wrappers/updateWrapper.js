@@ -34,4 +34,3 @@ function updateWrapper(itemName, updateFunction) {
 
 var _default = updateWrapper;
 exports.default = _default;
-module.exports = exports["default"];

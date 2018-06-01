@@ -1,6 +1,6 @@
 "use strict";
 
-var _interopRequireWildcard = require("babel-runtime/helpers/interopRequireWildcard");
+var _interopRequireDefault = require("babel-runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -9,31 +9,30 @@ exports.authenticated = authenticated;
 exports.requireAdmin = requireAdmin;
 exports.checkPermission = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _reactRedux = require("react-redux");
 
 var _reactRouterRedux = require("react-router-redux");
 
 function authenticated(WrappedComponent) {
-  var _dec, _class;
+  var _dec, _class2;
 
   return (// hocs.... hocs all the way down
     _dec = (0, _reactRedux.connect)(store => ({
       isAuthenticated: store.auth.isAuthenticated
-    })), _dec(_class = class HOCLoader extends _react.Component {
-      constructor(...args) {
+    })), _dec(_class2 = class HOCLoader extends _react.default.Component {
+      constructor() {
         var _temp;
 
-        return _temp = super(...args), Object.defineProperty(this, "redirectIfNotAuthenticated", {
+        return _temp = super(...arguments), Object.defineProperty(this, "redirectIfNotAuthenticated", {
           configurable: true,
           enumerable: true,
           writable: true,
           value: () => {
-            const {
-              isAuthenticated,
-              dispatch
-            } = this.props;
+            const _props = this.props,
+                  isAuthenticated = _props.isAuthenticated,
+                  dispatch = _props.dispatch;
 
             if (!isAuthenticated) {
               dispatch((0, _reactRouterRedux.push)('/login'));
@@ -51,28 +50,27 @@ function authenticated(WrappedComponent) {
         return _react.default.createElement(WrappedComponent, this.props);
       }
 
-    }) || _class
+    }) || _class2
   );
 }
 
 function requireAdmin(WrappedComponent) {
-  var _dec2, _class3;
+  var _dec2, _class4;
 
   return _dec2 = (0, _reactRedux.connect)(store => ({
     isAccessed: checkPermission(store)
-  })), _dec2(_class3 = class HOCLoader extends _react.Component {
-    constructor(...args) {
+  })), _dec2(_class4 = class HOCLoader extends _react.default.Component {
+    constructor() {
       var _temp2;
 
-      return _temp2 = super(...args), Object.defineProperty(this, "redirectIfPermissionDenied", {
+      return _temp2 = super(...arguments), Object.defineProperty(this, "redirectIfPermissionDenied", {
         configurable: true,
         enumerable: true,
         writable: true,
         value: () => {
-          const {
-            isAccessed,
-            dispatch
-          } = this.props;
+          const _props2 = this.props,
+                isAccessed = _props2.isAccessed,
+                dispatch = _props2.dispatch;
 
           if (!isAccessed) {
             dispatch((0, _reactRouterRedux.push)('/app-home'));
@@ -90,13 +88,11 @@ function requireAdmin(WrappedComponent) {
       return _react.default.createElement(WrappedComponent, this.props);
     }
 
-  }) || _class3;
+  }) || _class4;
 }
 
 const checkPermission = (store, permission) => {
-  const {
-    users
-  } = store;
+  const users = store.users;
   if (!users || !users.selectedUserId) return false;
   return true;
 };

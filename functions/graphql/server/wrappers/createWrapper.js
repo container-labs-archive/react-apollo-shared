@@ -46,4 +46,3 @@ function createWrapper(collectionName, input, createFunction) {
 
 var _default = createWrapper;
 exports.default = _default;
-module.exports = exports["default"];

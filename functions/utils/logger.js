@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-const envKey = undefined || "production";
+const envKey = process.env.NODE_BUILD_ENV || process.env.NODE_ENV;
 let Logger = class Logger {
   constructor(environment) {
     this.environment = environment;
@@ -60,4 +60,3 @@ let Logger = class Logger {
 };
 var _default = Logger;
 exports.default = _default;
-module.exports = exports["default"];

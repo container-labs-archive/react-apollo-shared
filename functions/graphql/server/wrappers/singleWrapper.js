@@ -22,4 +22,3 @@ function singleWrapper(itemName) {
 
 var _default = singleWrapper;
 exports.default = _default;
-module.exports = exports["default"];

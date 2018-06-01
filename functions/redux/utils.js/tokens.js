@@ -15,7 +15,7 @@ var _stringify = _interopRequireDefault(require("babel-runtime/core-js/json/stri
 
 var _firebase = require("../firebase/firebase");
 
-const TOKEN = `libra_token_${undefined}`; // grab the token
+const TOKEN = `libra_token_${process.env.NODE_BUILD_ENV}`; // grab the token
 // try to parse it
 // see how old it is
 // if it's old, refresh

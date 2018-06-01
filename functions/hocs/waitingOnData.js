@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("babel-runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require("babel-runtime/helpers/interopRequireWildcard");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _Loader = _interopRequireDefault(require("./utils/Loader"));
 
@@ -17,11 +15,11 @@ var _Loader = _interopRequireDefault(require("./utils/Loader"));
 // not responsible for loading data
 function waitingOnData(WrappedComponent) {
   // eslint-disable-line
-  return class HOCWaitingOnData extends _react.Component {
-    constructor(...args) {
+  return class HOCWaitingOnData extends _react.default.Component {
+    constructor() {
       var _temp;
 
-      return _temp = super(...args), Object.defineProperty(this, "props", {
+      return _temp = super(...arguments), Object.defineProperty(this, "props", {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -30,9 +28,7 @@ function waitingOnData(WrappedComponent) {
     }
 
     render() {
-      const {
-        hasData
-      } = this.props;
+      const hasData = this.props.hasData;
 
       let content = _react.default.createElement(_Loader.default, null);
 
@@ -48,4 +44,3 @@ function waitingOnData(WrappedComponent) {
 
 var _default = waitingOnData;
 exports.default = _default;
-module.exports = exports["default"];

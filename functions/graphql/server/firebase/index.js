@@ -77,4 +77,3 @@ let FireClass = class FireClass {
 };
 var _default = FireClass;
 exports.default = _default;
-module.exports = exports["default"];

@@ -28,14 +28,14 @@
   },
   "homepage": "https://github.com/container-labs/react-apollo-shared#readme",
   "dependencies": {
+    "@material-ui/core": "^1.1.0",
+    "@material-ui/icons": "^1.1.0",
     "babel-runtime": "7.0.0-beta.3",
     "lodash": "latest",
-    "material-ui": "1.0.0-beta.23",
-    "material-ui-icons": "^1.0.0-beta.17",
-    "redux": "^3.7.2",
-    "react": "15.6.2",
+    "react": "16.3.1",
     "react-redux": "5.0.5",
-    "react-router-redux": "^5.0.0-alpha.6"
+    "react-router-redux": "^5.0.0-alpha.6",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.31",
@@ -60,31 +60,5 @@
   },
   "peerDependenciers": {
     "firebase-admin": "5.2.1"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/env",
-        {
-          "targets": {
-            "node": "6.11.1"
-          }
-        }
-      ],
-      "stage-2",
-      "flow",
-      "react"
-    ],
-    "plugins": [
-      "add-module-exports",
-      "transform-decorators-legacy",
-      "transform-runtime",
-      "transform-imports",
-      "transform-inline-environment-variables",
-      "transform-react-jsx",
-      "transform-class-properties",
-      "transform-flow-strip-types",
-      "react-html-attrs"
-    ]
   }
 }

@@ -1,0 +1,40 @@
+{
+  "parser": "babel-eslint",
+  "extends" : [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "rules" : {
+    "no-console": [0],
+    "no-debugger": [0],
+    "max-len" : ["error", 130],
+    "no-restricted-globals": [0],
+    "react/forbid-prop-types": [0],
+    "react/require-default-props": [0],
+    "react/prefer-stateless-function": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+
+    "import/no-unresolved": [0],
+    "import/no-extraneous-dependencies": [0],
+    "import/prefer-default-export": [0]
+  },
+  "settings" : {
+    "import/resolver" : {
+      "webpack" : {
+        "config" : "webpack.config.js"
+      }
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "flowtype"
+  ],
+  "env": {
+    "browser": true
+  }
+}

@@ -1,13 +1,13 @@
 // @flow
 
-import React, { Component } from 'react';
+import React from 'react';
 
 import Loader from './utils/Loader';
 
 // purposefully abstract, can be used for anything waiting for data
 // not responsible for loading data
 function waitingOnData(WrappedComponent) { // eslint-disable-line
-  return class HOCWaitingOnData extends Component {
+  return class HOCWaitingOnData extends React.Component {
     props: {
       hasData: Boolean,
     };

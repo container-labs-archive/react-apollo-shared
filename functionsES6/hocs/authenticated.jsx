@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 
@@ -7,7 +7,7 @@ import { push } from 'react-router-redux';
   isAuthenticated: store.auth.isAuthenticated,
 }))
 export function authenticated(WrappedComponent) {
-  return class HOCLoader extends Component {
+  return class HOCLoader extends React.Component {
     componentWillMount() {
       this.redirectIfNotAuthenticated();
     }
@@ -37,7 +37,7 @@ export function authenticated(WrappedComponent) {
   isAccessed: checkPermission(store),
 }))
 export function requireAdmin(WrappedComponent) {
-  return class HOCLoader extends Component {
+  return class HOCLoader extends React.Component {
     componentWillMount() {
       this.redirectIfPermissionDenied();
     }

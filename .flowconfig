@@ -1,0 +1,19 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[options]
+esproposal.class_instance_fields=enable
+esproposal.decorators=ignore
+module.name_mapper='^Apollo$' -> '<PROJECT_ROOT>/src/js/apollo.js'
+module.name_mapper='^Assets$' -> '<PROJECT_ROOT>/src/assets'
+module.name_mapper='^Config$' -> '<PROJECT_ROOT>/src/js/config/index.js'
+module.name_mapper='^Components$' -> '<PROJECT_ROOT>/src/js/components'
+module.name_mapper='^Middleware$' -> '<PROJECT_ROOT>/src/js/redux/middleware'
+module.name_mapper='^HOCS$' -> '<PROJECT_ROOT>/src/js/components/Hocs/index.js'
+module.name_mapper='^Query$' -> '<PROJECT_ROOT>/src/js/graphql'
+module.name_mapper='^Redux$' -> '<PROJECT_ROOT>/src/js/redux'
+module.name_mapper='^Selectors$' -> '<PROJECT_ROOT>/src/js/selectors'
+module.name_mapper='^Types$' -> '<PROJECT_ROOT>/src/js/utils/types.js'

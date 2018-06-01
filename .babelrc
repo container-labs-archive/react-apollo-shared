@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 5 chrome versions", "last 5 firefox versions"]
+        }
+      }
+    ],
+    "stage-2",
+    "flow",
+    "react"
+  ],
+  "plugins": [
+    "react-html-attrs",
+    "transform-class-properties",
+    "transform-flow-strip-types",
+    "transform-decorators-legacy",
+    "transform-runtime",
+    "react-hot-loader/babel",
+  ],
+}

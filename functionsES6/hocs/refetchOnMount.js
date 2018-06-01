@@ -1,9 +1,9 @@
 // @flow
 
-import React, { Component } from 'react';
+import React from 'react';
 
 function refetchOnMount(WrappedComponent) {
-  return class HOCWaitingOnData extends Component<{ data: Object }> {
+  return class HOCWaitingOnData extends React.Component<{ data: Object }> {
     componentWillMount() {
       const {
         data,

@@ -1,5 +1,5 @@
 import React from 'react';
-import Error from 'material-ui-icons/Error';
+import Error from '@material-ui/icons/Error';
 
 const CONTAINER_STYLES = {
   textAlign: 'center',

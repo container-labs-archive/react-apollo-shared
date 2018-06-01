@@ -1,6 +1,6 @@
 {
   "name": "@containerlabs/react-apollo-shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a shared library for hocs and utils used in a React / Apollo application",
   "main": "functions/index.js",
   "scripts": {

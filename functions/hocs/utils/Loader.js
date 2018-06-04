@@ -9,7 +9,7 @@ exports.default = Loader;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _CircularProgress = _interopRequireDefault(require("material-ui/core/CircularProgress"));
+var _CircularProgress = _interopRequireDefault(require("@material-ui/core/CircularProgress"));
 
 const LOADING_STYLES = {
   textAlign: 'center',

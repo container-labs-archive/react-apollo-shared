@@ -16,10 +16,10 @@ var _Loader = _interopRequireDefault(require("./utils/Loader"));
 function waitingOnData(WrappedComponent) {
   // eslint-disable-line
   return class HOCWaitingOnData extends _react.default.Component {
-    constructor() {
+    constructor(...args) {
       var _temp;
 
-      return _temp = super(...arguments), Object.defineProperty(this, "props", {
+      return _temp = super(...args), Object.defineProperty(this, "props", {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -28,7 +28,9 @@ function waitingOnData(WrappedComponent) {
     }
 
     render() {
-      const hasData = this.props.hasData;
+      const {
+        hasData
+      } = this.props;
 
       let content = _react.default.createElement(_Loader.default, null);
 

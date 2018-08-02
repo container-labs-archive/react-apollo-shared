@@ -26,10 +26,7 @@ const Auth = new _immutable.Record({
 });
 const LOGIN_SUCCESS_FULFILLED = 'LOGIN_SUCCESS_FULFILLED';
 
-function reducer() {
-  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Auth();
-  let action = arguments[1];
-
+function reducer(state = new Auth(), action) {
   switch (action.type) {
     case _actions.LOGIN_REQUEST:
       {

@@ -22,17 +22,18 @@ function authenticated(WrappedComponent) {
     _dec = (0, _reactRedux.connect)(store => ({
       isAuthenticated: store.auth.isAuthenticated
     })), _dec(_class2 = class HOCLoader extends _react.default.Component {
-      constructor() {
+      constructor(...args) {
         var _temp;
 
-        return _temp = super(...arguments), Object.defineProperty(this, "redirectIfNotAuthenticated", {
+        return _temp = super(...args), Object.defineProperty(this, "redirectIfNotAuthenticated", {
           configurable: true,
           enumerable: true,
           writable: true,
           value: () => {
-            const _props = this.props,
-                  isAuthenticated = _props.isAuthenticated,
-                  dispatch = _props.dispatch;
+            const {
+              isAuthenticated,
+              dispatch
+            } = this.props;
 
             if (!isAuthenticated) {
               dispatch((0, _reactRouterRedux.push)('/login'));
@@ -60,17 +61,18 @@ function requireAdmin(WrappedComponent) {
   return _dec2 = (0, _reactRedux.connect)(store => ({
     isAccessed: checkPermission(store)
   })), _dec2(_class4 = class HOCLoader extends _react.default.Component {
-    constructor() {
+    constructor(...args) {
       var _temp2;
 
-      return _temp2 = super(...arguments), Object.defineProperty(this, "redirectIfPermissionDenied", {
+      return _temp2 = super(...args), Object.defineProperty(this, "redirectIfPermissionDenied", {
         configurable: true,
         enumerable: true,
         writable: true,
         value: () => {
-          const _props2 = this.props,
-                isAccessed = _props2.isAccessed,
-                dispatch = _props2.dispatch;
+          const {
+            isAccessed,
+            dispatch
+          } = this.props;
 
           if (!isAccessed) {
             dispatch((0, _reactRouterRedux.push)('/app-home'));
@@ -92,7 +94,9 @@ function requireAdmin(WrappedComponent) {
 }
 
 const checkPermission = (store, permission) => {
-  const users = store.users;
+  const {
+    users
+  } = store;
   if (!users || !users.selectedUserId) return false;
   return true;
 };

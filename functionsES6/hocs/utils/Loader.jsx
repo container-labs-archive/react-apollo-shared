@@ -10,12 +10,14 @@ const styles = {
 };
 
 @withStyles(sytles)
-export default function Loader() {
-  const { classes } = this.props;
+export default class Loader extends React.Component {
+  render() {
+    const { classes } = this.props;
 
-  return (
-    <div className={classes.wrapper}>
-      <CircularProgress />
-    </div>
-  );
+    return (
+      <div className={classes.wrapper}>
+        <CircularProgress />
+      </div>
+    );
+  }
 }

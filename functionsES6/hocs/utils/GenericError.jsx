@@ -10,15 +10,17 @@ const styles = {
 };
 
 @withStyles(styles)
-export default function GenericError(props) {
-  const {
-    classes,
-    error, // eslint-disable-line
-  } = props;
+export default class GenericError extends React.Component {
+  render() {
+    const {
+      classes,
+      error, // eslint-disable-line
+    } = props;
 
-  return (
-    <div className={classes.wrapper}>
-      <Error />
-    </div>
-  );
+    return (
+      <div className={classes.wrapper}>
+        <Error />
+      </div>
+    );
+  }
 }

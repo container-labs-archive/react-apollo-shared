@@ -9,7 +9,7 @@ const styles = {
   },
 };
 
-@withStyles(sytles)
+@withStyles(styles)
 export default class Loader extends React.Component {
   render() {
     const { classes } = this.props;

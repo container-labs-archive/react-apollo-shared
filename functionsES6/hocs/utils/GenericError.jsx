@@ -15,7 +15,7 @@ export default class GenericError extends React.Component {
     const {
       classes,
       error, // eslint-disable-line
-    } = props;
+    } = this.props;
 
     return (
       <div className={classes.wrapper}>

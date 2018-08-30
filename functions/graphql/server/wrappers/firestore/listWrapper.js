@@ -25,18 +25,16 @@ function listWrapper(collectionName, opts) {
 
 
   if (queryOpts.filter && queryOpts.filter.on) {
-    const {
-      on,
-      value
-    } = queryOpts.filter;
+    const _queryOpts$filter = queryOpts.filter,
+          on = _queryOpts$filter.on,
+          value = _queryOpts$filter.value;
     collectionRef = collectionRef.where(on, '==', value);
   }
 
   if (queryOpts.orderBy) {
-    const {
-      by,
-      direction
-    } = queryOpts.orderBy;
+    const _queryOpts$orderBy = queryOpts.orderBy,
+          by = _queryOpts$orderBy.by,
+          direction = _queryOpts$orderBy.direction;
     const finalDirection = direction === undefined ? 'desc' : direction;
     collectionRef = collectionRef.orderBy(by, finalDirection);
   }

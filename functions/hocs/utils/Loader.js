@@ -21,11 +21,9 @@ const styles = {
     marginTop: '20px'
   }
 };
-let Loader = (_dec = (0, _styles.withStyles)(sytles), _dec(_class = class Loader extends _react.default.Component {
+let Loader = (_dec = (0, _styles.withStyles)(styles), _dec(_class = class Loader extends _react.default.Component {
   render() {
-    const {
-      classes
-    } = this.props;
+    const classes = this.props.classes;
     return _react.default.createElement("div", {
       className: classes.wrapper
     }, _react.default.createElement(_CircularProgress.default, null));

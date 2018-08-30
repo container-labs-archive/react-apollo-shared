@@ -20,10 +20,10 @@ var _GenericError = _interopRequireDefault(require("./utils/GenericError"));
 // not responsible for loading data
 function queryLoader(WrappedComponent) {
   return class HOCQueryLoader extends _react.Component {
-    constructor(...args) {
+    constructor() {
       var _temp;
 
-      return _temp = super(...args), Object.defineProperty(this, "props", {
+      return _temp = super(...arguments), Object.defineProperty(this, "props", {
         configurable: true,
         enumerable: true,
         writable: true,
@@ -32,9 +32,7 @@ function queryLoader(WrappedComponent) {
     }
 
     render() {
-      const {
-        data
-      } = this.props;
+      const data = this.props.data;
       const error = data ? data.error : undefined;
       const loading = data ? data.loading : false;
 

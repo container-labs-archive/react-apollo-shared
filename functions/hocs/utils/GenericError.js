@@ -23,11 +23,9 @@ const styles = {
 };
 let GenericError = (_dec = (0, _styles.withStyles)(styles), _dec(_class = class GenericError extends _react.default.Component {
   render() {
-    const {
-      classes,
-      error // eslint-disable-line
-
-    } = props;
+    const _props = this.props,
+          classes = _props.classes,
+          error = _props.error;
     return _react.default.createElement("div", {
       className: classes.wrapper
     }, _react.default.createElement(_Error.default, null));

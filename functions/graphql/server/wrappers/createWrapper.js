@@ -26,12 +26,12 @@ function createWrapper(collectionName, input, createFunction) {
     key: newModelRef.key,
     createDate: Date.now()
   }, input);
-  console.log(`CREATE: ${collectionName} ${model.key}`);
+  console.log("CREATE: ".concat(collectionName, " ").concat(model.key));
   return createFunction(model, newModelRef).then(() => {
     return {
       status: 200,
       key: model.key,
-      message: `appended to ${collectionName}`
+      message: "appended to ".concat(collectionName)
     };
   }).catch(error => {
     console.error(error);

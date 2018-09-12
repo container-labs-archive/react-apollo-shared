@@ -13,7 +13,7 @@ var _lodash = _interopRequireDefault(require("lodash"));
 var _firebase = _interopRequireDefault(require("../firebase"));
 
 function listWrapper(collectionName, opts) {
-  console.log(`GET_LIST: ${collectionName}`);
+  console.log("GET_LIST: ".concat(collectionName));
   console.time('listWrapper');
   let queryOpts = opts || {};
 
@@ -48,13 +48,13 @@ function listWrapper(collectionName, opts) {
 }
 
 function childListWrapper(collectionName, parentKey, childName, childListFunction) {
-  console.log(`CHILD_LIST: ${childName} for ${collectionName}`, parentKey);
+  console.log("CHILD_LIST: ".concat(childName, " for ").concat(collectionName), parentKey);
   console.time('childList');
   return _firebase.default.instance().ref(collectionName).orderByChild(childName).equalTo(parentKey).once('value').then(snapshot => {
     const models = _firebase.default.instance().mapSnapshotToEntities(snapshot);
 
     console.timeEnd('childList');
-    console.log(`returning ${collectionName} ${models.length} ${childName}`);
+    console.log("returning ".concat(collectionName, " ").concat(models.length, " ").concat(childName));
     return childListFunction(models);
   }).catch(error => {
     console.error(error);

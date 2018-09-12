@@ -11,7 +11,7 @@ var _firebase = _interopRequireDefault(require("../firebase"));
 
 // @no-flow
 function deleteWrapper(itemName, deleteFunction) {
-  console.log(`DELETE: ${itemName}`);
+  console.log("DELETE: ".concat(itemName));
 
   const itemRef = _firebase.default.instance().ref(itemName);
 
@@ -20,7 +20,7 @@ function deleteWrapper(itemName, deleteFunction) {
     return {
       status: 200,
       key: itemName,
-      message: `${itemName} deleted`
+      message: "".concat(itemName, " deleted")
     };
   }).catch(error => {
     return {

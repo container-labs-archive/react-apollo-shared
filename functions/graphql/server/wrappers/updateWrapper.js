@@ -11,7 +11,7 @@ var _firebase = _interopRequireDefault(require("../firebase"));
 
 // @no-flow
 function updateWrapper(itemName, updateFunction) {
-  console.log(`UPDATE: ${itemName}`);
+  console.log("UPDATE: ".concat(itemName));
 
   const itemRef = _firebase.default.instance().ref(itemName);
 
@@ -20,7 +20,7 @@ function updateWrapper(itemName, updateFunction) {
     return {
       status: 200,
       key: itemName,
-      message: `${itemName} updated`
+      message: "".concat(itemName, " updated")
     };
   }).catch(error => {
     return {

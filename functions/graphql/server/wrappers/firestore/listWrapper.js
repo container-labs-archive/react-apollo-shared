@@ -16,7 +16,7 @@ var _firebase = require("../firebase");
 const PAGE_SIZE = 25; // initial cloud firestore list wrapper test
 
 function listWrapper(collectionName, opts) {
-  console.log(`GET_LIST: ${collectionName}`);
+  console.log("GET_LIST: ".concat(collectionName));
   console.time('listWrapper');
   const queryOpts = opts || {};
   console.log('opts', opts);

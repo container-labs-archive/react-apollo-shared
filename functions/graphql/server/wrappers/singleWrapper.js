@@ -10,7 +10,7 @@ exports.default = void 0;
 var _firebase = _interopRequireDefault(require("../firebase"));
 
 function singleWrapper(itemName) {
-  console.log(`GET: ${itemName}`);
+  console.log("GET: ".concat(itemName));
   return _firebase.default.instance().getEntity(itemName).then(model => {
     // extra work here?
     return model;

@@ -26,7 +26,7 @@ function requestLogin() {
 }
 
 function getTokenObject(payload) {
-  return payload.getIdToken().then(token => {
+  return payload.getIdToken().then(function (token) {
     return {
       uid: payload.uid,
       email: payload.email,
@@ -37,11 +37,11 @@ function getTokenObject(payload) {
 }
 
 function loginSuccess(result) {
-  return dispatch => {
+  return function (dispatch) {
     dispatch({
       type: LOGIN_SUCCESS,
       payload: getTokenObject(result)
-    }).then(() => {
+    }).then(function () {
       dispatch((0, _reactRouterRedux.push)('/home')); // dispatch(selectUser(result.uid));
     });
   };
@@ -55,12 +55,14 @@ function loginError(error) {
 }
 
 function login(creds) {
-  return dispatch => {
+  return function (dispatch) {
     dispatch(requestLogin());
 
-    _firebase.firebaseAuth.signInWithEmailAndPassword(creds.username, creds.password).then(result => {
+    _firebase.firebaseAuth.signInWithEmailAndPassword(creds.username, creds.password).then(function (result) {
       dispatch(loginSuccess(result));
-    }).catch(error => dispatch(loginError(error)));
+    }).catch(function (error) {
+      return dispatch(loginError(error));
+    });
   };
 }
 
@@ -96,10 +98,14 @@ function logoutFailure(error) {
 }
 
 function logout() {
-  return dispatch => {
+  return function (dispatch) {
     dispatch(requestLogout());
     localStorage.removeItem('matched_ports_token'); // eslint-disable-line no-undef
 
-    _firebase.firebaseAuth.signOut().then(() => dispatch(logoutSuccess())).catch(error => dispatch(logoutFailure(error)));
+    _firebase.firebaseAuth.signOut().then(function () {
+      return dispatch(logoutSuccess());
+    }).catch(function (error) {
+      return dispatch(logoutFailure(error));
+    });
   };
 }

@@ -24,7 +24,7 @@ exports.TOKEN = TOKEN;
 
 function getTokenObject(payload) {
   // console.log('token name', TOKEN);
-  return payload.getIdToken(true).then(token => {
+  return payload.getIdToken(true).then(function (token) {
     // console.log('TOKEN', token);
     return (0, _stringify.default)({
       uid: payload.uid,
@@ -39,7 +39,7 @@ function refreshToken() {
   const user = _firebase.firebaseAuth.currentUser;
 
   if (user != null) {
-    getTokenObject(user).then(tokenObj => {
+    getTokenObject(user).then(function (tokenObj) {
       // console.log("SETTING STORAGE WITH NEW TOKEN", tokenObj);
       localStorage.setItem(TOKEN, tokenObj);
     });

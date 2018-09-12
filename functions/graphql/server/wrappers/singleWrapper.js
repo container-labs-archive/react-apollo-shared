@@ -11,10 +11,10 @@ var _firebase = _interopRequireDefault(require("../firebase"));
 
 function singleWrapper(itemName) {
   console.log("GET: ".concat(itemName));
-  return _firebase.default.instance().getEntity(itemName).then(model => {
+  return _firebase.default.instance().getEntity(itemName).then(function (model) {
     // extra work here?
     return model;
-  }).catch(error => {
+  }).catch(function (error) {
     console.error(error);
     return null;
   });

@@ -51,8 +51,8 @@ function listWrapper(collectionName, opts) {
     data: [],
     page: queryOpts.page
   };
-  return collectionRef.get().then(snapshot => {
-    snapshot.forEach(doc => {
+  return collectionRef.get().then(function (snapshot) {
+    snapshot.forEach(function (doc) {
       response.data.push((0, _extends2.default)({}, doc.data(), {
         key: doc.id,
         id: doc.id

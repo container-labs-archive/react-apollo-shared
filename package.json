@@ -1,6 +1,6 @@
 {
   "name": "@containerlabs/react-apollo-shared",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "a shared library for hocs and utils used in a React / Apollo application",
   "main": "functions/index.js",
   "scripts": {
@@ -56,7 +56,8 @@
     "babel-preset-env": "7.0.0-beta.3",
     "babel-preset-react": "7.0.0-beta.3",
     "babel-preset-stage-2": "7.0.0-beta.3",
-    "babel-register": "7.0.0-beta.3"
+    "babel-register": "7.0.0-beta.3",
+    "babel-plugin-transform-es2015-arrow-functions": "7.0.0-beta.3"
   },
   "peerDependenciers": {
     "firebase-admin": "5.2.1"

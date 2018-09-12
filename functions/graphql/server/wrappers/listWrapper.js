@@ -24,16 +24,18 @@ function listWrapper(collectionName, opts) {
     queryRef = _firebase.default.instance().ref(collectionName).orderByKey().limitToLast(queryOpts.limit);
   }
 
-  return queryRef.once('value').then(snapshot => {
+  return queryRef.once('value').then(function (snapshot) {
     return _firebase.default.instance().mapSnapshotToEntities(snapshot);
-  }).then(models => {
+  }).then(function (models) {
     console.timeEnd('listWrapper');
     let sortedModels = models;
 
     if (queryOpts.sortBy !== undefined) {
       console.log('sorting'); // todo: allow sortby to be an array?
 
-      sortedModels = _lodash.default.sortBy(models, [model => model[queryOpts.sortBy].toLowerCase()]);
+      sortedModels = _lodash.default.sortBy(models, [function (model) {
+        return model[queryOpts.sortBy].toLowerCase();
+      }]);
     }
 
     if (queryOpts.sortReverse !== undefined) {
@@ -41,7 +43,7 @@ function listWrapper(collectionName, opts) {
     }
 
     return sortedModels;
-  }).catch(error => {
+  }).catch(function (error) {
     console.error(error);
     return null;
   });
@@ -50,13 +52,13 @@ function listWrapper(collectionName, opts) {
 function childListWrapper(collectionName, parentKey, childName, childListFunction) {
   console.log("CHILD_LIST: ".concat(childName, " for ").concat(collectionName), parentKey);
   console.time('childList');
-  return _firebase.default.instance().ref(collectionName).orderByChild(childName).equalTo(parentKey).once('value').then(snapshot => {
+  return _firebase.default.instance().ref(collectionName).orderByChild(childName).equalTo(parentKey).once('value').then(function (snapshot) {
     const models = _firebase.default.instance().mapSnapshotToEntities(snapshot);
 
     console.timeEnd('childList');
     console.log("returning ".concat(collectionName, " ").concat(models.length, " ").concat(childName));
     return childListFunction(models);
-  }).catch(error => {
+  }).catch(function (error) {
     console.error(error);
     return null;
   });

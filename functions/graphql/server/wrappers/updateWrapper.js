@@ -15,14 +15,14 @@ function updateWrapper(itemName, updateFunction) {
 
   const itemRef = _firebase.default.instance().ref(itemName);
 
-  return updateFunction(itemRef).then(() => {
+  return updateFunction(itemRef).then(function () {
     // make singular, meh worth it?
     return {
       status: 200,
       key: itemName,
       message: "".concat(itemName, " updated")
     };
-  }).catch(error => {
+  }).catch(function (error) {
     return {
       status: 500,
       key: itemName,

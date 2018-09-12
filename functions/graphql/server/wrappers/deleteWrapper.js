@@ -15,14 +15,14 @@ function deleteWrapper(itemName, deleteFunction) {
 
   const itemRef = _firebase.default.instance().ref(itemName);
 
-  return deleteFunction(itemRef).then(() => {
+  return deleteFunction(itemRef).then(function () {
     // make singular, meh worth it?
     return {
       status: 200,
       key: itemName,
       message: "".concat(itemName, " deleted")
     };
-  }).catch(error => {
+  }).catch(function (error) {
     return {
       status: 500,
       key: itemName,

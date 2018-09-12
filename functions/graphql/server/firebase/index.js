@@ -52,9 +52,11 @@ let FireClass = class FireClass {
   }
 
   mapSnapshotToEntities(snapshot) {
-    return (0, _lodash.map)(snapshot.val(), (value, id) => (0, _extends2.default)({
-      id
-    }, value));
+    return (0, _lodash.map)(snapshot.val(), function (value, id) {
+      return (0, _extends2.default)({
+        id
+      }, value);
+    });
   }
 
   getValue(path) {

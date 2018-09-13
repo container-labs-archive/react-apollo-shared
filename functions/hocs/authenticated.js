@@ -9,6 +9,8 @@ exports.authenticated = authenticated;
 exports.requireAdmin = requireAdmin;
 exports.checkPermission = void 0;
 
+var _inheritsLoose2 = _interopRequireDefault(require("babel-runtime/helpers/inheritsLoose"));
+
 var _react = _interopRequireDefault(require("react"));
 
 var _reactRedux = require("react-redux");
@@ -23,36 +25,47 @@ function authenticated(WrappedComponent) {
       return {
         isAuthenticated: store.auth.isAuthenticated
       };
-    }), _dec(_class2 = class HOCLoader extends _react.default.Component {
-      constructor() {
+    }), _dec(_class2 =
+    /*#__PURE__*/
+    function (_React$Component) {
+      (0, _inheritsLoose2.default)(HOCLoader, _React$Component);
+
+      function HOCLoader() {
         var _temp, _this;
 
-        return _temp = _this = super(...arguments), Object.defineProperty(this, "redirectIfNotAuthenticated", {
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+
+        return (_temp = _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this, Object.defineProperty(_this, "redirectIfNotAuthenticated", {
           configurable: true,
           enumerable: true,
           writable: true,
           value: function value() {
-            const _this$props = _this.props,
-                  isAuthenticated = _this$props.isAuthenticated,
-                  dispatch = _this$props.dispatch;
+            var _this$props = _this.props,
+                isAuthenticated = _this$props.isAuthenticated,
+                dispatch = _this$props.dispatch;
 
             if (!isAuthenticated) {
               dispatch((0, _reactRouterRedux.push)('/login'));
             }
           }
-        }), _temp;
+        }), _temp) || _this;
       }
 
-      componentWillMount() {
+      var _proto = HOCLoader.prototype;
+
+      _proto.componentWillMount = function componentWillMount() {
         this.redirectIfNotAuthenticated();
-      }
+      };
 
-      render() {
+      _proto.render = function render() {
         this.redirectIfNotAuthenticated();
         return _react.default.createElement(WrappedComponent, this.props);
-      }
+      };
 
-    }) || _class2
+      return HOCLoader;
+    }(_react.default.Component)) || _class2
   );
 }
 
@@ -63,40 +76,51 @@ function requireAdmin(WrappedComponent) {
     return {
       isAccessed: checkPermission(store)
     };
-  }), _dec2(_class4 = class HOCLoader extends _react.default.Component {
-    constructor() {
+  }), _dec2(_class4 =
+  /*#__PURE__*/
+  function (_React$Component2) {
+    (0, _inheritsLoose2.default)(HOCLoader, _React$Component2);
+
+    function HOCLoader() {
       var _temp2, _this2;
 
-      return _temp2 = _this2 = super(...arguments), Object.defineProperty(this, "redirectIfPermissionDenied", {
+      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      return (_temp2 = _this2 = _React$Component2.call.apply(_React$Component2, [this].concat(args)) || this, Object.defineProperty(_this2, "redirectIfPermissionDenied", {
         configurable: true,
         enumerable: true,
         writable: true,
         value: function value() {
-          const _this2$props = _this2.props,
-                isAccessed = _this2$props.isAccessed,
-                dispatch = _this2$props.dispatch;
+          var _this2$props = _this2.props,
+              isAccessed = _this2$props.isAccessed,
+              dispatch = _this2$props.dispatch;
 
           if (!isAccessed) {
             dispatch((0, _reactRouterRedux.push)('/app-home'));
           }
         }
-      }), _temp2;
+      }), _temp2) || _this2;
     }
 
-    componentWillMount() {
+    var _proto2 = HOCLoader.prototype;
+
+    _proto2.componentWillMount = function componentWillMount() {
       this.redirectIfPermissionDenied();
-    }
+    };
 
-    render() {
+    _proto2.render = function render() {
       this.redirectIfPermissionDenied();
       return _react.default.createElement(WrappedComponent, this.props);
-    }
+    };
 
-  }) || _class4;
+    return HOCLoader;
+  }(_react.default.Component)) || _class4;
 }
 
-const checkPermission = function checkPermission(store, permission) {
-  const users = store.users;
+var checkPermission = function checkPermission(store, permission) {
+  var users = store.users;
   if (!users || !users.selectedUserId) return false;
   return true;
 };

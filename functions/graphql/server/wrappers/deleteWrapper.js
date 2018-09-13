@@ -13,7 +13,7 @@ var _firebase = _interopRequireDefault(require("../firebase"));
 function deleteWrapper(itemName, deleteFunction) {
   console.log("DELETE: ".concat(itemName));
 
-  const itemRef = _firebase.default.instance().ref(itemName);
+  var itemRef = _firebase.default.instance().ref(itemName);
 
   return deleteFunction(itemRef).then(function () {
     // make singular, meh worth it?
@@ -27,7 +27,7 @@ function deleteWrapper(itemName, deleteFunction) {
       status: 500,
       key: itemName,
       message: 'delete failed',
-      error
+      error: error
     };
   });
 }

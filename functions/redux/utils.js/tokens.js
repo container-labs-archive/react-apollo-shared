@@ -15,7 +15,7 @@ var _stringify = _interopRequireDefault(require("babel-runtime/core-js/json/stri
 
 var _firebase = require("../firebase/firebase");
 
-const TOKEN = "libra_token_".concat(process.env.NODE_BUILD_ENV); // grab the token
+var TOKEN = "libra_token_".concat(process.env.NODE_BUILD_ENV); // grab the token
 // try to parse it
 // see how old it is
 // if it's old, refresh
@@ -30,13 +30,13 @@ function getTokenObject(payload) {
       uid: payload.uid,
       email: payload.email,
       timestamp: new Date().getTime(),
-      token
+      token: token
     });
   });
 }
 
 function refreshToken() {
-  const user = _firebase.firebaseAuth.currentUser;
+  var user = _firebase.firebaseAuth.currentUser;
 
   if (user != null) {
     getTokenObject(user).then(function (tokenObj) {
@@ -49,13 +49,13 @@ function refreshToken() {
 function storageToken() {
   // console.log('storageToken');
   // refreshToken();
-  const tokenObject = localStorage.getItem(TOKEN);
+  var tokenObject = localStorage.getItem(TOKEN);
 
   if (tokenObject === null || tokenObject === 'null') {
     return null;
   }
 
-  let token = null;
+  var token = null;
 
   try {
     token = JSON.parse(tokenObject);
@@ -69,15 +69,15 @@ function storageToken() {
 
 function isAuthenticated() {
   // console.log('token name', TOKEN);
-  const token = storageToken();
+  var token = storageToken();
 
   if (token === null) {
     return false;
   }
 
-  const tokenTimestamp = token.timestamp;
-  const nowTimestamp = new Date().getTime();
-  const diffStampInSeconds = (nowTimestamp - tokenTimestamp) / 1000;
+  var tokenTimestamp = token.timestamp;
+  var nowTimestamp = new Date().getTime();
+  var diffStampInSeconds = (nowTimestamp - tokenTimestamp) / 1000;
 
   if (diffStampInSeconds >= 36000) {
     // 10 hours
@@ -88,7 +88,7 @@ function isAuthenticated() {
 }
 
 function idFromStorage() {
-  const token = storageToken();
+  var token = storageToken();
 
   if (token === null) {
     return null;
@@ -99,15 +99,15 @@ function idFromStorage() {
 
 function authTokenFromStorage() {
   // console.log('token name', TOKEN);
-  const token = storageToken();
+  var token = storageToken();
 
   if (token === null) {
     return null;
   }
 
-  const tokenTimestamp = token.timestamp;
-  const nowTimestamp = new Date().getTime();
-  const diffStampInSeconds = (nowTimestamp - tokenTimestamp) / 1000;
+  var tokenTimestamp = token.timestamp;
+  var nowTimestamp = new Date().getTime();
+  var diffStampInSeconds = (nowTimestamp - tokenTimestamp) / 1000;
 
   if (diffStampInSeconds >= 1800) {
     // every half hour
@@ -120,7 +120,7 @@ function authTokenFromStorage() {
 
 
 function emailFromStorage() {
-  const token = storageToken();
+  var token = storageToken();
 
   if (token === null) {
     return null;

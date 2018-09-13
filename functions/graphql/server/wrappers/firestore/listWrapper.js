@@ -13,29 +13,29 @@ var _lodash = _interopRequireDefault(require("lodash"));
 
 var _firebase = require("../firebase");
 
-const PAGE_SIZE = 25; // initial cloud firestore list wrapper test
+var PAGE_SIZE = 25; // initial cloud firestore list wrapper test
 
 function listWrapper(collectionName, opts) {
   console.log("GET_LIST: ".concat(collectionName));
   console.time('listWrapper');
-  const queryOpts = opts || {};
+  var queryOpts = opts || {};
   console.log('opts', opts);
 
-  let collectionRef = _firebase.admin.firestore().collection(collectionName); // TODO: what about a fuzzy filter?
+  var collectionRef = _firebase.admin.firestore().collection(collectionName); // TODO: what about a fuzzy filter?
 
 
   if (queryOpts.filter && queryOpts.filter.on) {
-    const _queryOpts$filter = queryOpts.filter,
-          on = _queryOpts$filter.on,
-          value = _queryOpts$filter.value;
+    var _queryOpts$filter = queryOpts.filter,
+        on = _queryOpts$filter.on,
+        value = _queryOpts$filter.value;
     collectionRef = collectionRef.where(on, '==', value);
   }
 
   if (queryOpts.orderBy) {
-    const _queryOpts$orderBy = queryOpts.orderBy,
-          by = _queryOpts$orderBy.by,
-          direction = _queryOpts$orderBy.direction;
-    const finalDirection = direction === undefined ? 'desc' : direction;
+    var _queryOpts$orderBy = queryOpts.orderBy,
+        by = _queryOpts$orderBy.by,
+        direction = _queryOpts$orderBy.direction;
+    var finalDirection = direction === undefined ? 'desc' : direction;
     collectionRef = collectionRef.orderBy(by, finalDirection);
   }
 
@@ -47,7 +47,7 @@ function listWrapper(collectionName, opts) {
     collectionRef = collectionRef.limit(queryOpts.limit);
   }
 
-  const response = {
+  var response = {
     data: [],
     page: queryOpts.page
   };

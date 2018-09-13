@@ -13,7 +13,7 @@ var _firebase = _interopRequireDefault(require("../firebase"));
 function updateWrapper(itemName, updateFunction) {
   console.log("UPDATE: ".concat(itemName));
 
-  const itemRef = _firebase.default.instance().ref(itemName);
+  var itemRef = _firebase.default.instance().ref(itemName);
 
   return updateFunction(itemRef).then(function () {
     // make singular, meh worth it?
@@ -27,7 +27,7 @@ function updateWrapper(itemName, updateFunction) {
       status: 500,
       key: itemName,
       message: 'update failed',
-      error
+      error: error
     };
   });
 }

@@ -19,10 +19,10 @@ function createWrapper(collectionName, input, createFunction) {
     return _promise.default.reject();
   }
 
-  const collectionRef = _firebase.default.instance().ref(collectionName);
+  var collectionRef = _firebase.default.instance().ref(collectionName);
 
-  const newModelRef = collectionRef.push();
-  const model = (0, _extends2.default)({
+  var newModelRef = collectionRef.push();
+  var model = (0, _extends2.default)({
     key: newModelRef.key,
     createDate: Date.now()
   }, input);
@@ -39,7 +39,7 @@ function createWrapper(collectionName, input, createFunction) {
       status: 500,
       key: model.key,
       message: 'append failed',
-      error
+      error: error
     };
   });
 }

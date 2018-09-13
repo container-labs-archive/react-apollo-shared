@@ -15,7 +15,7 @@ var _actions = require("./actions");
 
 var _tokens = require("../utils/tokens");
 
-const Auth = new _immutable.Record({
+var Auth = new _immutable.Record({
   isAuthenticated: (0, _tokens.isAuthenticated)(),
   userId: (0, _tokens.idFromStorage)(),
   userEmail: (0, _tokens.emailFromStorage)(),
@@ -24,11 +24,11 @@ const Auth = new _immutable.Record({
   user: '',
   id: ''
 });
-const LOGIN_SUCCESS_FULFILLED = 'LOGIN_SUCCESS_FULFILLED';
+var LOGIN_SUCCESS_FULFILLED = 'LOGIN_SUCCESS_FULFILLED';
 
 function reducer() {
-  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Auth();
-  let action = arguments[1];
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Auth();
+  var action = arguments[1];
 
   switch (action.type) {
     case _actions.LOGIN_REQUEST:
@@ -38,8 +38,8 @@ function reducer() {
 
     case LOGIN_SUCCESS_FULFILLED:
       {
-        const payload = action.payload;
-        let newState = state.set('isAuthenticated', true);
+        var payload = action.payload;
+        var newState = state.set('isAuthenticated', true);
         newState = newState.set('isFetching', false);
         newState = newState.set('error', '');
         newState = newState.set('id', action.payload.uid);
@@ -51,8 +51,9 @@ function reducer() {
 
     case _actions.LOGIN_FAILURE:
       {
-        const newState = state.set('isFetching', false);
-        return newState.set('error', action.payload.message);
+        var _newState = state.set('isFetching', false);
+
+        return _newState.set('error', action.payload.message);
       }
 
     case _actions.LOGOUT_REQUEST:
@@ -62,10 +63,11 @@ function reducer() {
 
     case _actions.LOGOUT_SUCCESS:
       {
-        let newState = state.set('isFetching', false);
-        newState = newState.set('isAuthenticated', false);
+        var _newState2 = state.set('isFetching', false);
+
+        _newState2 = _newState2.set('isAuthenticated', false);
         localStorage.setItem(_tokens.TOKEN, null);
-        return newState;
+        return _newState2;
       }
 
     default:

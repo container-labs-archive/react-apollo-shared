@@ -15,9 +15,9 @@ var _firebase = _interopRequireDefault(require("../firebase"));
 function listWrapper(collectionName, opts) {
   console.log("GET_LIST: ".concat(collectionName));
   console.time('listWrapper');
-  let queryOpts = opts || {};
+  var queryOpts = opts || {};
 
-  let queryRef = _firebase.default.instance().ref(collectionName); // TODO: need to sort first....
+  var queryRef = _firebase.default.instance().ref(collectionName); // TODO: need to sort first....
 
 
   if (queryOpts.limit) {
@@ -28,7 +28,7 @@ function listWrapper(collectionName, opts) {
     return _firebase.default.instance().mapSnapshotToEntities(snapshot);
   }).then(function (models) {
     console.timeEnd('listWrapper');
-    let sortedModels = models;
+    var sortedModels = models;
 
     if (queryOpts.sortBy !== undefined) {
       console.log('sorting'); // todo: allow sortby to be an array?
@@ -53,7 +53,7 @@ function childListWrapper(collectionName, parentKey, childName, childListFunctio
   console.log("CHILD_LIST: ".concat(childName, " for ").concat(collectionName), parentKey);
   console.time('childList');
   return _firebase.default.instance().ref(collectionName).orderByChild(childName).equalTo(parentKey).once('value').then(function (snapshot) {
-    const models = _firebase.default.instance().mapSnapshotToEntities(snapshot);
+    var models = _firebase.default.instance().mapSnapshotToEntities(snapshot);
 
     console.timeEnd('childList');
     console.log("returning ".concat(collectionName, " ").concat(models.length, " ").concat(childName));

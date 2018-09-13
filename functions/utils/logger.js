@@ -4,13 +4,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-const envKey = process.env.NODE_BUILD_ENV || process.env.NODE_ENV;
-let Logger = class Logger {
-  constructor(environment) {
+var envKey = process.env.NODE_BUILD_ENV || process.env.NODE_ENV;
+
+var Logger =
+/*#__PURE__*/
+function () {
+  function Logger(environment) {
     this.environment = environment;
   }
 
-  log(message) {
+  var _proto = Logger.prototype;
+
+  _proto.log = function log(message) {
     switch (this.environment) {
       case 'test':
         {
@@ -22,9 +27,9 @@ let Logger = class Logger {
           console.log(message); // eslint-disable-line
         }
     }
-  }
+  };
 
-  error(message) {
+  _proto.error = function error(message) {
     switch (envKey) {
       case 'test':
         {
@@ -36,9 +41,9 @@ let Logger = class Logger {
           console.error(message); // eslint-disable-line
         }
     }
-  }
+  };
 
-  debug(message) {
+  _proto.debug = function debug(message) {
     switch (envKey) {
       case 'test':
         {
@@ -55,8 +60,10 @@ let Logger = class Logger {
           console.log(message); // eslint-disable-line
         }
     }
-  }
+  };
 
-};
+  return Logger;
+}();
+
 var _default = Logger;
 exports.default = _default;

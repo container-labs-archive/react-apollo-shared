@@ -12,11 +12,11 @@ var _reactRouterRedux = require("react-router-redux");
 var _firebase = require("../firebase/firebase");
 
 // import { selectUser } from '../users/actions';
-const LOGIN_REQUEST = 'LOGIN_REQUEST';
+var LOGIN_REQUEST = 'LOGIN_REQUEST';
 exports.LOGIN_REQUEST = LOGIN_REQUEST;
-const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+var LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 exports.LOGIN_SUCCESS = LOGIN_SUCCESS;
-const LOGIN_FAILURE = 'LOGIN_FAILURE';
+var LOGIN_FAILURE = 'LOGIN_FAILURE';
 exports.LOGIN_FAILURE = LOGIN_FAILURE;
 
 function requestLogin() {
@@ -31,7 +31,7 @@ function getTokenObject(payload) {
       uid: payload.uid,
       email: payload.email,
       timestamp: new Date().getTime(),
-      token
+      token: token
     };
   });
 }
@@ -66,11 +66,11 @@ function login(creds) {
   };
 }
 
-const LOGOUT_REQUEST = 'LOGOUT_REQUEST';
+var LOGOUT_REQUEST = 'LOGOUT_REQUEST';
 exports.LOGOUT_REQUEST = LOGOUT_REQUEST;
-const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+var LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 exports.LOGOUT_SUCCESS = LOGOUT_SUCCESS;
-const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
+var LOGOUT_FAILURE = 'LOGOUT_FAILURE';
 exports.LOGOUT_FAILURE = LOGOUT_FAILURE;
 
 function requestLogout() {

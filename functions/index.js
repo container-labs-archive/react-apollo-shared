@@ -77,6 +77,12 @@ Object.defineProperty(exports, "waitingOnData", {
     return _hocs.waitingOnData;
   }
 });
+Object.defineProperty(exports, "BrowserLogger", {
+  enumerable: true,
+  get: function get() {
+    return _utils.BrowserLogger;
+  }
+});
 Object.defineProperty(exports, "Logger", {
   enumerable: true,
   get: function get() {

@@ -17,6 +17,7 @@ import {
 } from './hocs';
 
 import {
+  BrowserLogger,
   Logger,
 } from './utils';
 
@@ -37,5 +38,6 @@ export {
   refetchOnMount,
   waitingOnData,
 
+  BrowserLogger,
   Logger,
 }

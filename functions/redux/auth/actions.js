@@ -7,7 +7,7 @@ exports.login = login;
 exports.logout = logout;
 exports.LOGOUT_FAILURE = exports.LOGOUT_SUCCESS = exports.LOGOUT_REQUEST = exports.LOGIN_FAILURE = exports.LOGIN_SUCCESS = exports.LOGIN_REQUEST = void 0;
 
-var _reactRouterRedux = require("react-router-redux");
+var _connectedReactRouter = require("connected-react-router");
 
 var _firebase = require("../firebase/firebase");
 
@@ -42,7 +42,7 @@ function loginSuccess(result) {
       type: LOGIN_SUCCESS,
       payload: getTokenObject(result)
     }).then(function () {
-      dispatch((0, _reactRouterRedux.push)('/home')); // dispatch(selectUser(result.uid));
+      dispatch((0, _connectedReactRouter.push)('/home')); // dispatch(selectUser(result.uid));
     });
   };
 }

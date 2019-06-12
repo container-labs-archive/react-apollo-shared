@@ -15,7 +15,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRedux = require("react-redux");
 
-var _reactRouterRedux = require("react-router-redux");
+var _connectedReactRouter = require("connected-react-router");
 
 function authenticated(WrappedComponent) {
   var _dec, _class2;
@@ -47,7 +47,7 @@ function authenticated(WrappedComponent) {
                 dispatch = _this$props.dispatch;
 
             if (!isAuthenticated) {
-              dispatch((0, _reactRouterRedux.push)('/login'));
+              dispatch((0, _connectedReactRouter.push)('/login'));
             }
           }
         }), _temp) || _this;
@@ -98,7 +98,7 @@ function requireAdmin(WrappedComponent) {
               dispatch = _this2$props.dispatch;
 
           if (!isAccessed) {
-            dispatch((0, _reactRouterRedux.push)('/app-home'));
+            dispatch((0, _connectedReactRouter.push)('/app-home'));
           }
         }
       }), _temp2) || _this2;

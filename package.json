@@ -1,6 +1,6 @@
 {
   "name": "@containerlabs/react-apollo-shared",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "a shared library for hocs and utils used in a React / Apollo application",
   "main": "functions/index.js",
   "scripts": {
@@ -28,15 +28,27 @@
   },
   "homepage": "https://github.com/container-labs/react-apollo-shared#readme",
   "dependencies": {
-    "@material-ui/core": "^4.1.0",
-    "@material-ui/icons": "^4.1.0",
+    "@material-ui/core": "^4.3.2",
+    "@material-ui/icons": "^4.2.1",
     "babel-runtime": "7.0.0-beta.3",
-    "lodash": "^4.17.11",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "lodash": "^4.17.15",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-redux": "^7.1.0",
-    "connected-react-router": "^6.4.0",
-    "redux": "^4.0.1"
+    "connected-react-router": "^6.5.2",
+    "redux": "^4.0.4"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4.3.2",
+    "@material-ui/icons": "^4.2.1",
+    "babel-runtime": "7.0.0-beta.3",
+    "lodash": "^4.17.15",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "connected-react-router": "^6.5.2",
+    "redux": "^4.0.4",
+    "firebase-admin": "^8.3.0"
   },
   "devDependencies": {
     "babel-core": "7.0.0-beta.3",
@@ -79,8 +91,5 @@
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-proto-to-assign": "7.0.0-beta.3",
     "babel-plugin-transform-regenerator": "7.0.0-beta.3"
-  },
-  "peerDependenciers": {
-    "firebase-admin": "5.2.1"
   }
 }

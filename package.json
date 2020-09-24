@@ -29,6 +29,7 @@
   "homepage": "https://github.com/container-labs/react-apollo-shared#readme",
   "dependencies": {
     "@babel/plugin-proposal-function-sent": "^7.10.4",
+    "@babel/plugin-proposal-throw-expressions": "^7.10.4",
     "@babel/runtime": "^7.11.2",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",

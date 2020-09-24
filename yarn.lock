@@ -1003,13 +1003,14 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@containerlabs/funpack@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@containerlabs/funpack/-/funpack-1.4.0.tgz#5d46c68878fa34bab3bf4c78eca3048d0bdf5c36"
-  integrity sha512-ffYFi/Se/3JUL7DDKx5bsnzDaydyjh1S1BvwdxWqieyd6oIC0cBPq6ObsmekzLlhmoJKrDfihIM/xx4HTKdyjw==
+"@containerlabs/funpack@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@containerlabs/funpack/-/funpack-1.5.0.tgz#f696677c9a3945d7c813e5777b03cbbe0eb7dd6b"
+  integrity sha512-jwQCBzE45R1jTiYfdiIjca7cXaTqJh9nxwClCzaisxv6vehKWNKuGmmW4nkDjZBVvndvBPjnkqsuDkBQ1DPVWQ==
   dependencies:
     "@babel/cli" "^7.11.6"
     "@babel/runtime" "^7.11.2"
+    core-js "^3.2.1"
     rimraf "^2.6.2"
 
 "@emotion/hash@^0.8.0":
@@ -1484,6 +1485,11 @@ core-js-compat@^3.6.2:
 core-js@^2.4.0:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
+
+core-js@^3.2.1:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
+  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
 
 core-util-is@~1.0.0:
   version "1.0.2"

@@ -336,6 +336,15 @@
     "@babel/helper-plugin-utils" "^7.10.4"
     "@babel/plugin-syntax-export-namespace-from" "^7.8.3"
 
+"@babel/plugin-proposal-function-sent@^7.10.4":
+  version "7.10.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-sent/-/plugin-proposal-function-sent-7.10.4.tgz#05f2daef7b3f09b6c74c9e8a85b430272d206ac4"
+  integrity sha512-aBtve/DhQsVPAGnSDcgt33gF36rO0TK+KtHp9Hwtj3KwH+o1Cii9vfVVYeB9c6Jo1SXOgTRwRD7ljpTS0qbN8w==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.10.4"
+    "@babel/helper-wrap-function" "^7.10.4"
+    "@babel/plugin-syntax-function-sent" "^7.10.4"
+
 "@babel/plugin-proposal-json-strings@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-json-strings/-/plugin-proposal-json-strings-7.10.4.tgz#593e59c63528160233bd321b1aebe0820c2341db"
@@ -449,6 +458,13 @@
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-flow/-/plugin-syntax-flow-7.10.4.tgz#53351dd7ae01995e567d04ce42af1a6e0ba846a6"
   integrity sha512-yxQsX1dJixF4qEEdzVbst3SZQ58Nrooz8NV9Z9GL4byTE25BvJgl5lf0RECUf0fh28rZBb/RYTWn/eeKwCMrZQ==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.10.4"
+
+"@babel/plugin-syntax-function-sent@^7.10.4":
+  version "7.10.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-function-sent/-/plugin-syntax-function-sent-7.10.4.tgz#b551f38b629e2e20908e53624f96f9ab300f5061"
+  integrity sha512-dwElaRoDQhlVevbgKOlEUTe08QNJo4ZjWw3rqnMbEvH8NRJM+iPN2tTQtzyfNloXD8f3Jdiyf5Pn400B1U3SVA==
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 

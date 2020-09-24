@@ -1041,15 +1041,15 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@containerlabs/funpack@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@containerlabs/funpack/-/funpack-1.5.0.tgz#f696677c9a3945d7c813e5777b03cbbe0eb7dd6b"
-  integrity sha512-jwQCBzE45R1jTiYfdiIjca7cXaTqJh9nxwClCzaisxv6vehKWNKuGmmW4nkDjZBVvndvBPjnkqsuDkBQ1DPVWQ==
+"@containerlabs/funpack@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@containerlabs/funpack/-/funpack-1.6.0.tgz#a6e80b5c81525beb10e454c89fdb4c99c5ff6742"
+  integrity sha512-0Ri7jeZChNiKK8mMFddto14i9zisLulscN70K3/3HwW6ZHFGJIQV1ZhQXH3fL71oAzGSdTe+ijgYCCTuGfFRjg==
   dependencies:
     "@babel/cli" "^7.11.6"
     "@babel/runtime" "^7.11.2"
     core-js "^3.2.1"
-    rimraf "^2.6.2"
+    rimraf "^3.0.2"
 
 "@emotion/hash@^0.8.0":
   version "0.8.0"
@@ -1836,6 +1836,18 @@ glob-parent@^3.1.0:
 glob@^7.0.0, glob@^7.0.5:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.4"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
+glob@^7.1.3:
+  version "7.1.6"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
+  integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -2828,11 +2840,18 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
-rimraf@^2.6.1, rimraf@^2.6.2:
+rimraf@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
     glob "^7.0.5"
+
+rimraf@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
+  integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
+  dependencies:
+    glob "^7.1.3"
 
 safe-buffer@^5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"

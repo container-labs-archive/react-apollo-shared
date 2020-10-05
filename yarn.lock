@@ -1042,13 +1042,12 @@
     to-fast-properties "^2.0.0"
 
 "@containerlabs/funpack@^1.6.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@containerlabs/funpack/-/funpack-1.8.0.tgz#8d97843266facdbae69a89ccb15c14021cd88bfb"
-  integrity sha512-7Qm/dz78RjILZLOKPceR9uKUn5U3NP02mr9pADJHazB3FTjM/FaBvsEN8sOZ8MfL1GxlVdVf8PLL1qhA5JdEXg==
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@containerlabs/funpack/-/funpack-1.13.0.tgz#14dc1c0824be22c56e19d4fccfdc644ca35c12b7"
+  integrity sha512-cy5cOYCkNb0SolgWRGNBfEoL7Niw0pzfA5sHzwwh71Vz4bIAS2WucSt9HEujubP1B1kAI6Ct4KxFzpGrEShkrg==
   dependencies:
     "@babel/cli" "^7.11.6"
-    "@babel/runtime" "^7.11.2"
-    core-js "^3.6.5"
+    "@babel/core" "^7.11.6"
     rimraf "^3.0.2"
 
 "@emotion/hash@^0.8.0":
@@ -1463,7 +1462,7 @@ core-js@^2.4.0:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
-core-js@^3.2.1, core-js@^3.6.5:
+core-js@^3.2.1:
   version "3.6.5"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
   integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
